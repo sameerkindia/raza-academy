@@ -1,0 +1,44 @@
+.main__header {
+  background-color: var(--color-white);
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  z-index: 100;
+
+  &--nav {
+    display: flex;
+    align-items: center;
+    transition: all 0.4s;
+
+    @media only screen and (max-width: $bp-extra-large) {
+      z-index: 200;
+      position: fixed;
+      top: 0;
+      display: block;
+      width: 50%;
+      height: 100vh;
+      background-color: var(--color-white);
+      overflow: scroll;
+      transform: translateX(-70rem);
+    }
+  }
+}
+
+.footer {
+  background-color: var(--color-primery-1);
+}
+
+.section {
+  padding: 4rem;
+}
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+
+  z-index: 10;
+  position: fixed;
+  top: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,67 @@
+:root {
+  --color-primery-1: #9d6400;
+  --color-primery-2: #125b86;
+
+  --color-bg: #f5f5f5;
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #999;
+  --color-gray-light: #ccc8c8;
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 93.75em; // 1200px
+$bp-extra-large: 71.875em; // 1150px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 31.25em; // 500px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-bg);
+}
+
+.link__btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: var(--color-primery-2);
+  }
+
+  &-durood:link,
+  &-durood:visited {
+    background-color: var(--color-primery-2);
+    color: var(--color-white);
+  }
+  &-books:link,
+  &-books:visited {
+    background-color: var(--color-primery-2);
+    color: var(--color-white);
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--color-primery-1);
+    color: var(--color-white);
+  }
+}
